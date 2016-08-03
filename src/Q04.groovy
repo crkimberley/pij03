@@ -8,16 +8,16 @@ class Point {
     double y
 }
 
-Point pointA = new Point()
-Point pointB = new Point()
-Point pointC = new Point()
 Scanner input = new Scanner(System.in)
 print "Enter X & Y coordinates for Points A, B & C with a space between each coordinate: "
 Scanner entry = new Scanner(input.nextLine())
+Point pointA = new Point()
 pointA.x = entry.nextDouble()
 pointA.y = entry.nextDouble()
+Point pointB = new Point()
 pointB.x = entry.nextDouble()
 pointB.y = entry.nextDouble()
+Point pointC = new Point()
 pointC.x = entry.nextDouble()
 pointC.y = entry.nextDouble()
 double distanceSquaredAB = pow((pointA.x - pointB.x), 2) + pow((pointA.y - pointB.y), 2)
