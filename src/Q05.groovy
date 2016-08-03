@@ -5,7 +5,7 @@ class Rectangle {
     Point upLeft
     Point downRight
 }
-
+// class Point already defined in default package - Q04
 Scanner input = new Scanner(System.in)
 println "Enter X & Y coordinates for opposite corners of a rectangle"
 print "upLeft.x, upleft.y, downRight.x, downRight.y - with a space between each coordinate: "
