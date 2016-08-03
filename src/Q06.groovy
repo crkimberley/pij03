@@ -1,6 +1,7 @@
 /**
  * Created by crk on 03/08/2016.
  */
+// Point & Rectangle classes defined in previous questions
 Scanner input = new Scanner(System.in)
 println "Point inside or outside a rectangle?"
 println "Enter X & Y coordinates for opposite corners of a rectangle and a 3rd point"
