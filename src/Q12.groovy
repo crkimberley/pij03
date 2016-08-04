@@ -33,16 +33,17 @@ changePence = changePence - change5Pence * 5
 int change2Pence = changePence / 2
 changePence = changePence - change2Pence * 2
 
-
-println "change50Pounds = " + change50Pounds
-println "change20Pounds = " + change20Pounds
-println "change10Pounds = " + change10Pounds
-println "change5Pounds = " + change5Pounds
-println "change2Pounds = " + change2Pounds
-println "changePounds = " + changePounds
-println "change50Pence = " + change50Pence
-println "change20Pence = " + change20Pence
-println "change10Pence = " + change10Pence
-println "change5Pence = " + change5Pence
-println "change2Pence = " + change2Pence
-println "changePence = " + changePence
+println "NOTES"
+println "No. of £50 notes = " + change50Pounds
+println "No. of £20 notes = " + change20Pounds
+println "No. of £10 notes = " + change10Pounds
+println "No. of £5 notes = " + change5Pounds
+println "COINS"
+println "No. of £2 coins = " + change2Pounds
+println "No. of £1 coins = " + changePounds
+println "No. of 50p coins = " + change50Pence
+println "No. of 20p coins = " + change20Pence
+println "No. of 10p coins = " + change10Pence
+println "No. of 5p coins = " + change5Pence
+println "No. of 2p coins = " + change2Pence
+println "No. of 1p coins = " + changePence
