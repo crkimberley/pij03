@@ -3,13 +3,11 @@
  */
 Scanner input = new Scanner(System.in)
 print "Relaxed Palindrome checker - enter text: "
-text = input.nextLine()
+String text = input.nextLine()
 String cleanText = ""
-char textChar
 for (int i=0;i<text.length();i++) {
-    textChar = text.charAt(i)
-    if (textChar.isLetter()) {
-        cleanText = cleanText + textChar.toLowerCase()
+    if (((char) text.charAt(i)).isLetter()) {
+        cleanText = cleanText + ((char) text.charAt(i)).toLowerCase()
     }
 }
 boolean check = true
