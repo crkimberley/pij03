@@ -8,7 +8,7 @@ String text = input.nextLine()
 
 // Whole number calculation
 String wholeNumberString = ""
-int pointPosition = 0
+int pointPosition = -1
 for (int i=0;i<text.length();i++) {
     if (text.charAt(i) != ',') {
         if (text.charAt(i) != '.') {
@@ -37,6 +37,6 @@ int adjustedDecimalNumber = Integer.parseInt(adjustedDecimalString)
 int adjustedDecimalResult = adjustedDecimalNumber / 2
 // Remove leading adjusting digit for decimal result
 String adjustedDecimalResultString = "" + adjustedDecimalResult
-String decimalResultString = adjustedDecimalResultString.substring(1)
+String decimalResultString = "." + adjustedDecimalResultString.substring(1)
 
-println text + " / 2 = " + wholeNumberResult + "." + decimalResultString
+println text + " / 2 = " + wholeNumberResult + decimalResultString
