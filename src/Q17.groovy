@@ -2,11 +2,13 @@
  * @author crkimberley on 05/08/2016.
  */
 Scanner input = new Scanner(System.in)
-println "Mail Server Program"
 boolean quit = false
+boolean done, command
+String text, mailTo, mailFrom
+println "Mail Server Program"
 
 // Email return address
-boolean done = false
+done = false
 while (!done) {
     print ">>> "
     text = input.nextLine()
@@ -14,8 +16,25 @@ while (!done) {
         quit = true
         break
     }
-    done = true
-    println "OK"
+    if (text.length() > 12) {
+        if (text.substring(0,10) == "MAIL FROM:") {
+            int atCount = 0
+            for (int i=10;i<text.length();i++) {
+                if (text.charAt(i) == '@' as char) {
+                    atCount++
+                }
+            }
+            if (atCount == 1) {
+                mailFrom = text.substring(10)
+                done = true
+                println "OK"
+            } else {
+                println "Invalid email"
+            }
+        } else {
+            print "Command invalid"
+        }
+    }
 }
 
 // Email recipient
@@ -27,8 +46,25 @@ while (!done && !quit) {
         quit = true
         break
     }
-    done = true
-    println "OK"
+    if (text.length() > 10) {
+        if (text.substring(0,8) == "RCPT TO:") {
+            int atCount = 0
+            for (int i=8;i<text.length();i++) {
+                if (text.charAt(i) == '@' as char) {
+                    atCount++
+                }
+            }
+            if (atCount == 1) {
+                mailTo = text.substring(8)
+                done = true
+                println "OK"
+            } else {
+                println "Invalid email"
+            }
+        } else {
+            print "Command invalid"
+        }
+    }
 }
 
 // Body of email
@@ -58,7 +94,7 @@ while (!done && !quit) {
 // Print email details & message
 if (!quit) {
     println "Sending email..."
-    println "from: "
-    println "to: "
+    println "from: " + mailFrom
+    println "to: " + mailTo
     print body
 }
