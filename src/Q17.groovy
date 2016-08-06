@@ -67,7 +67,7 @@ while (!done && !quit) {
     }
 }
 
-// Body of email
+// Body of email - message
 String body = ""
 done = false
 while (!done && !quit) {
@@ -91,7 +91,6 @@ while (!done && !quit) {
     }
 }
 
-// Print email details & message
 if (!quit) {
     println "Sending email..."
     println "from: " + mailFrom
