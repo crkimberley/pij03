@@ -50,10 +50,15 @@ while (!done && !quit) {
             body = body + text + "\n"
         }
         done = true
+    } else {
+        println "Invalid command"
     }
 }
 
-println "Sending email..."
-println "from: "
-println "to: "
-print body
+// Print email details & message
+if (!quit) {
+    println "Sending email..."
+    println "from: "
+    println "to: "
+    print body
+}
